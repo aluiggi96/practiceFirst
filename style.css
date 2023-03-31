@@ -1,0 +1,176 @@
+@font-face{
+    font-family: "Hanken Grotesk";
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+html{
+    font-size: 18px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Hanken Grotesk", sans-serif;
+}
+.fullViewCard{
+    display: flex;
+    border-radius: 25px;
+    margin: auto;
+    height: 20rem;
+    width: 30rem;
+    /* overflow: hidden; */
+    box-shadow: 1rem 1rem 1rem hsl(0, 0%, 95%);
+}
+.card{
+    width: 15rem;
+}
+.leftCard{
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.leftCard h1{
+    color: hsl(241, 100%, 89%);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 1.25rem auto;
+}
+.result{
+    position: relative;
+    border-radius: 50%;
+    margin: auto;
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+.result p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    color: hsla(221, 100%, 96%, .5);
+}
+.result p span{
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+.leftCard h2{
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.25rem;
+    margin: .75rem auto;
+}
+.leftCard p{
+    margin: auto;
+    width: 70%;
+    font-weight: 500;
+    font-size: .75rem;
+    color: hsl(241, 100%, 89%);
+}
+.rightCard{
+    position: relative;
+}
+.rightCard .details{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: fit-content;
+    overflow: hidden;
+}
+.details h1{
+    color: hsl(224, 30%, 27%);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem ;
+}
+.section{
+    margin: .5rem auto;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.section h2{
+    font-weight: 700;
+    font-size: .75rem;
+}
+.section .rigthSection{
+    display: flex;
+    gap: .75rem;
+}
+.rigthSection h2{
+    font-weight: 800;
+}
+.leftSection h2{
+    font-weight: 500;
+    color: hsla(224, 30%, 27%, .5);
+}
+.leftSection h2 span{
+    font-weight: 800;
+    color: hsl(224, 30%, 27%);
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%, .15);
+}
+.reaction .rigthSection h2{
+    color: hsl(0, 100%, 67%);
+}
+.memory{
+    background-color: hsla(39, 100%, 56%, .15);
+}
+.memory .rigthSection h2{
+    color: hsl(39, 100%, 56%);
+}
+.verbal{
+    background-color: hsla(166, 100%, 37%, .15);
+}
+.verbal .rigthSection h2{
+    color: hsl(166, 100%, 37%);
+}
+.visual{
+    background-color: hsla(234, 85%, 45%, .15);
+}
+.visual .rigthSection h2{
+    color: hsl(234, 85%, 45%);
+}
+.continue{
+    margin-top: 2rem;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 50px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(224, 30%, 27%);
+    transition: background-color 500ms linear;
+}
+.continue:hover{
+    background-color: hsl(241, 81%, 54%);
+    cursor: pointer;
+}
+.continue p{
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 426px) {
+    .fullViewCard{
+        width: auto;
+        height: 40rem;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 100%;
+        height: 50%;
+    }
+    .leftCard{
+        border-radius: 0 0 25px 25px;
+    }
+}
