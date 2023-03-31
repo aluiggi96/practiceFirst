@@ -14,10 +14,11 @@ html{
 body{
     font-family: "Hanken Grotesk", sans-serif;
 }
+
 .fullViewCard{
     display: flex;
     border-radius: 25px;
-    margin: auto;
+    margin: 5rem auto;
     height: 30rem;
     width: 37.5rem;
     overflow: hidden;
@@ -169,6 +170,7 @@ body{
 /* Mobile */
 @media screen and (max-width: 426px) {
     .fullViewCard{
+        margin: auto;
         width: auto;
         height: 40rem;
         flex-wrap: wrap;
