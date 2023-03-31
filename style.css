@@ -14,37 +14,35 @@ html{
 body{
     font-family: "Hanken Grotesk", sans-serif;
 }
-.container{
-    width: 100%;
-    height: 35rem;
-}
 .fullViewCard{
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 25px;
     margin: auto;
-    height: 25rem;
+    height: 30rem;
     width: 37.5rem;
     overflow: hidden;
     box-shadow: 1rem 1rem 1rem hsl(0, 0%, 95%);
 }
 .card{
-    width: 15rem;
     width: 50%;
 }
 .leftCard{
+    position: relative;
     text-align: center;
     border-radius: 25px;
     background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.score{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .leftCard h1{
     color: hsl(241, 100%, 89%);
     font-weight: 500;
     font-size: 1rem;
-    margin: 3rem auto;
+    margin-bottom: 1rem;
 }
 .result{
     position: relative;
@@ -75,7 +73,7 @@ body{
 }
 .leftCard p{
     margin: auto;
-    width: 50%;
+    width: 70%;
     font-weight: 500;
     font-size: .75rem;
     color: hsl(241, 100%, 89%);
@@ -174,6 +172,7 @@ body{
         width: auto;
         height: 40rem;
         flex-wrap: wrap;
+        border-radius:  0 0 25px 25px;
     }
     .card{
         width: 100%;
