@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: "Hanken Grotesk";
     src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
@@ -12,175 +12,127 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-family: "Hanken Grotesk", sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
 }
-
-.fullViewCard{
+.container{
     display: flex;
-    border-radius: 25px;
-    margin: 5rem auto;
-    height: 30rem;
-    width: 37.5rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.fullViewCard{
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
     overflow: hidden;
-    box-shadow: 1rem 1rem 1rem hsl(0, 0%, 95%);
+    box-shadow: 1rem 1rem 1rem hsl(0, 0%, 80%);
 }
 .card{
-    width: 50%;
+    padding: 1.5rem;
+    font-weight: 700;
 }
 .leftCard{
-    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    border-radius: 25px;
+    gap: 1.5rem;
     background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 2rem;
+    color: hsla(0, 0%, 100%, 0.5)
 }
-.score{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.leftCard h1{
-    color: hsl(241, 100%, 89%);
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-.result{
-    position: relative;
-    border-radius: 50%;
+.circleScore{
+    color: hsla(0, 0%, 100%, 0.25);
+    display: grid;
+    place-content: center;
     margin: auto;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
     background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
-.result p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 500;
-    color: hsla(221, 100%, 96%, .5);
-}
-.result p span{
+.bigNumber{
+    display: block;
     color: hsl(0, 0%, 100%);
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 1;
 }
-.leftCard h2{
+.rankScore{
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 0 2rem;
+}
+.bold{
+    display: block;
     font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2;
     color: hsl(0, 0%, 100%);
-    font-size: 1.25rem;
-    margin: .75rem auto;
-}
-.leftCard p{
-    margin: auto;
-    width: 70%;
-    font-weight: 500;
-    font-size: .75rem;
-    color: hsl(241, 100%, 89%);
 }
 .rightCard{
-    position: relative;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
 }
-.rightCard .details{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: fit-content;
-    overflow: hidden;
-}
-.details h1{
-    color: hsl(224, 30%, 27%);
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem ;
+.areaScore{
+    display: grid;
+    gap: 1rem;
 }
 .section{
-    margin: .5rem auto;
+    border-radius: 15px;
     padding: .5rem;
-    border-radius: .5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.section h2{
-    font-weight: 700;
-    font-size: .75rem;
-}
-.section .rigthSection{
+.section .leftSide{
     display: flex;
-    gap: .75rem;
+    gap: .5rem;
 }
-.rigthSection h2{
-    font-weight: 800;
-}
-.leftSection h2{
-    font-weight: 500;
-    color: hsla(224, 30%, 27%, .5);
-}
-.leftSection h2 span{
-    font-weight: 800;
-    color: hsl(224, 30%, 27%);
-}
-.reaction {
+.reaction{
+    color: hsl(0, 100%, 67%);
     background-color: hsla(0, 100%, 67%, .15);
 }
-.reaction .rigthSection h2{
-    color: hsl(0, 100%, 67%);
-}
 .memory{
+    color: hsl(39, 100%, 56%);
     background-color: hsla(39, 100%, 56%, .15);
 }
-.memory .rigthSection h2{
-    color: hsl(39, 100%, 56%);
-}
 .verbal{
+    color: hsl(166, 100%, 37%);
     background-color: hsla(166, 100%, 37%, .15);
 }
-.verbal .rigthSection h2{
-    color: hsl(166, 100%, 37%);
-}
 .visual{
+    color: hsl(234, 85%, 45%);
     background-color: hsla(234, 85%, 45%, .15);
 }
-.visual .rigthSection h2{
-    color: hsl(234, 85%, 45%);
-}
-.continue{
-    margin-top: 2rem;
-    width: 100%;
-    padding: .5rem;
-    border-radius: 50px;
+.button{
     text-align: center;
     color: hsl(0, 0%, 100%);
     background-color: hsl(224, 30%, 27%);
+    border-radius: 50px;
+    padding: 1rem;
     transition: background-color 500ms linear;
 }
-.continue:hover{
+.button:hover{
     background-color: hsl(241, 81%, 54%);
     cursor: pointer;
 }
-.continue p{
-    font-weight: 500;
-    font-size: .75rem;
+.section .rightSide{
+    color: hsla(0, 0%, 0%, .5);
+}
+.boldScore{
+    color: hsl(0, 0%, 0%);
 }
 
-
-/* Mobile */
-@media screen and (max-width: 426px) {
+@media only screen and (max-width: 600px){
     .fullViewCard{
-        margin: auto;
-        width: auto;
-        height: 40rem;
-        flex-wrap: wrap;
-        border-radius:  0 0 25px 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 0;
     }
-    .card{
-        width: 100%;
-        height: 50%;
-    }
-    .leftCard{
-        border-radius: 0 0 25px 25px;
+    .topCard{
+        border-radius: 0 0 2rem 2rem;
     }
 }
