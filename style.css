@@ -22,12 +22,12 @@ body{
     min-height: 100vh;
 }
 .fullViewCard{
-    max-width: 1440px;
+    max-width: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 2rem;
     overflow: hidden;
-    box-shadow: 1rem 1rem 1rem hsl(0, 0%, 80%);
+    box-shadow: 1rem 1rem 1rem hsla(0, 0%, 80%, .33);
 }
 .card{
     padding: 1.5rem;
